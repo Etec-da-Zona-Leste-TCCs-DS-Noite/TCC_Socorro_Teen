@@ -1,0 +1,361 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#efefef;
+}
+
+/* TOPO */
+
+.topo{
+    background:#fff;
+    height:80px;
+
+    display:grid;
+    grid-template-columns: 180px 1fr 180px;
+
+    align-items:center;
+
+    padding:0 20px;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+/* VOLTAR */
+
+.btn-voltar{
+    justify-self:end;
+
+    background:#f2f2f2;
+    padding:12px 22px;
+    border-radius:14px;
+
+    text-decoration:none;
+    color:#111827;
+    font-size:18px;
+    font-weight:600;
+}
+
+.btn-voltar:hover{
+    background:#e5e5e5;
+}
+
+/* TÍTULO CENTRAL */
+
+.status{
+    text-align:center;
+    color:#ef0000;
+    font-size:30px;
+    font-weight:800;
+}
+
+/* ÁUDIO */
+
+.btn-audio{
+    justify-self:start;
+
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:14px;
+
+    background:#f3f4f6;
+    cursor:pointer;
+    font-size:20px;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1000px;
+    margin:20px auto;
+    padding:20px;
+}
+
+/* CABEÇALHO */
+
+.cabecalho-emergencia{
+    background:#ef0000;
+    color:white;
+
+    text-align:center;
+
+    padding:28px;
+
+    border-radius:22px;
+}
+
+.cabecalho-emergencia h1{
+    font-size:44px;
+    margin-bottom:10px;
+}
+
+.cabecalho-emergencia p{
+    font-size:22px;
+}
+
+/* INSTRUÇÕES */
+
+.instrucoes{
+    background:white;
+
+    margin-top:25px;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.passo{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    margin-bottom:22px;
+}
+
+.passo span{
+    width:38px;
+    height:38px;
+
+    border-radius:50%;
+
+    background:#ef0000;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-weight:700;
+}
+
+.passo p{
+    font-size:20px;
+}
+
+/* CRONÔMETRO */
+
+.cronometro-box{
+    background:white;
+    margin-top:28px;
+    padding:30px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.cronometro-box h3{
+    color:#ef0000;
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.timer{
+    font-size:64px;
+    font-weight:800;
+    color:#ef0000;
+    margin-bottom:20px;
+}
+
+.btn-cronometro{
+    border:none;
+    background:#16a34a;
+    color:white;
+    padding:15px 30px;
+    border-radius:14px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.btn-cronometro:hover{
+    transform:scale(1.05);
+}
+
+/* BOTÃO SAMU */
+
+.area-ligar{
+    display:flex;
+    justify-content:center;
+
+    margin-top:40px;
+}
+
+.btn-ligar{
+    width:290px;
+    height:95px;
+
+    background:#ef0000;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    font-weight:800;
+
+    animation:pulsar 1.8s infinite;
+}
+
+.icone-tel{
+    font-size:34px;
+    margin-bottom:5px;
+}
+
+@keyframes pulsar{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.06);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .topo{
+        grid-template-columns:90px 1fr 90px;
+    }
+
+    .status{
+        font-size:20px;
+    }
+
+    .cabecalho-emergencia h1{
+        font-size:30px;
+    }
+
+    .cabecalho-emergencia p{
+        font-size:18px;
+    }
+
+    .passo p{
+        font-size:16px;
+    }
+
+    .timer{
+        font-size:48px;
+    }
+
+    .btn-cronometro{
+        width:100%;
+    }
+
+    .btn-ligar{
+        width:100%;
+        max-width:320px;
+    }
+
+}
+
+.cabecalho-emergencia{
+    background:#0f52ba;
+}
+
+.passo span{
+    background:#ef0000;
+}
+
+.cronometro-box h3{
+    color:#0f52ba;
+}
+
+.timer{
+    color:#0f52ba;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+
+    .topo{
+        grid-template-columns: 90px 1fr 90px;
+        padding: 0 10px;
+    }
+
+    .status{
+        font-size: 18px;
+    }
+
+    .btn-voltar{
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .btn-audio{
+        width: 38px;
+        height: 38px;
+    }
+
+    .container{
+        padding: 15px;
+    }
+
+    .cabecalho-emergencia{
+        padding: 22px 15px;
+    }
+
+    .cabecalho-emergencia h1{
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .cabecalho-emergencia p{
+        font-size: 18px;
+    }
+
+    .instrucoes{
+        padding: 20px;
+    }
+
+    .passo{
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .passo span{
+        min-width: 34px;
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .passo p{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .btn-ligar{
+        width: 100%;
+        max-width: 320px;
+        height: 90px;
+    }
+
+    .icone-tel{
+        font-size: 30px;
+    }
+
+}

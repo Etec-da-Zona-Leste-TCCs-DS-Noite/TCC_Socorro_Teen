@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crise Epiléptica - Emergência Ativa</title>
+
+  <link rel="stylesheet" href="../../css/cssemergencia/convulsao.css">
+</head>
+
+<body>
+
+<header class="topo">
+
+  <a href="../emergencia-agora.html" class="btn-voltar">
+    ← Voltar
+  </a>
+
+  <h2 class="status">
+    🚨 EMERGÊNCIA ATIVA
+  </h2>
+
+  <button class="btn-audio" onclick="lerPagina()">
+    🔊
+  </button>
+
+</header>
+
+<main class="container">
+
+  <section class="cabecalho-emergencia">
+    <h1>Crise Epiléptica - Aja Agora!</h1>
+    <p>Siga estas instruções imediatamente!</p>
+  </section>
+
+  <section class="instrucoes">
+
+    <div class="passo">
+      <span>1</span>
+      <p>Mantenha a calma</p>
+    </div>
+
+    <div class="passo">
+      <span>2</span>
+      <p>Afaste objetos perigosos ao redor</p>
+    </div>
+
+    <div class="passo">
+      <span>3</span>
+      <p>Coloque algo macio sob a cabeça</p>
+    </div>
+
+    <div class="passo">
+      <span>4</span>
+      <p>Nunca segure a pessoa nem coloque nada na boca</p>
+    </div>
+
+    <div class="passo">
+      <span>5</span>
+      <p>Cronometre o tempo da convulsão</p>
+    </div>
+
+    <div class="passo">
+      <span>•</span>
+      <p>Se durar mais de 5 minutos, ligue 192</p>
+    </div>
+
+    <div class="passo">
+      <span>6</span>
+      <p>Após a convulsão, vire a pessoa de lado</p>
+    </div>
+
+    <div class="passo">
+      <span>7</span>
+      <p>Aguarde ela se recuperar totalmente</p>
+    </div>
+
+  </section>
+
+  <!-- CRONÔMETRO -->
+
+  <section class="cronometro-box">
+
+    <h3>⏱️ Cronômetro da Convulsão</h3>
+
+    <div id="timer" class="timer">
+      00:00
+    </div>
+
+    <button
+      id="btnCronometro"
+      class="btn-cronometro"
+      onclick="toggleCronometro()">
+      Iniciar Cronômetro
+    </button>
+
+  </section>
+
+  <!-- BOTÃO SAMU -->
+
+  <div class="area-ligar">
+
+    <a href="tel:192" class="btn-ligar">
+
+      <span class="icone-tel">📞</span>
+
+      <span>🚑 LIGUE 192 - SAMU</span>
+
+    </a>
+
+  </div>
+
+</main>
+
+<script>
+
+let segundos = 0;
+let intervalo = null;
+let rodando = false;
+
+function toggleCronometro() {
+
+  const botao = document.getElementById("btnCronometro");
+
+  if (!rodando) {
+
+    intervalo = setInterval(() => {
+      segundos++;
+      atualizarTimer();
+    }, 1000);
+
+    rodando = true;
+    botao.textContent = "Parar Cronômetro";
+
+  } else {
+
+    clearInterval(intervalo);
+
+    rodando = false;
+    botao.textContent = "Continuar Cronômetro";
+  }
+}
+
+function atualizarTimer() {
+
+  const minutos = Math.floor(segundos / 60);
+  const seg = segundos % 60;
+
+  document.getElementById("timer").textContent =
+    `${String(minutos).padStart(2,'0')}:${String(seg).padStart(2,'0')}`;
+}
+
+function lerPagina(){
+
+const texto = `
+Emergência ativa.
+
+Crise epiléptica.
+
+Passo um.
+Mantenha a calma.
+
+Passo dois.
+Afaste objetos perigosos ao redor.
+
+Passo três.
+Coloque algo macio sob a cabeça.
+
+Passo quatro.
+Nunca segure a pessoa nem coloque nada na boca.
+
+Passo cinco.
+Cronometre o tempo da convulsão.
+
+Se durar mais de cinco minutos, ligue cento e noventa e dois.
+
+Passo seis.
+Após a convulsão, vire a pessoa de lado.
+
+Passo sete.
+Aguarde ela se recuperar totalmente.
+`;
+
+const fala = new SpeechSynthesisUtterance(texto);
+
+fala.lang = "pt-BR";
+fala.rate = 1;
+fala.pitch = 1;
+
+speechSynthesis.cancel();
+speechSynthesis.speak(fala);
+
+}
+
+</script>
+
+</body>
+</html>

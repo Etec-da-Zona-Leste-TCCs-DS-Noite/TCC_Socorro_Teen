@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primeiros Socorros – Socorro Teen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS CORRETO -->
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/primeiros-socorros.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+  <script type="module" src="../js/loadNavbar.js"></script>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 class="hero__title" id="hero-title">
+        <span class="hero__emoji">🚑</span>
+        Primeiros Socorros
+      </h1>
+
+      <p class="hero__subtitle">
+        Guias rápidos e fáceis para situações de emergência. Clique em qualquer<br />
+        situação para ver o passo a passo detalhado!
+      </p>
+
+      <div class="search">
+        <div class="search__wrap">
+          <svg class="search__icon" viewBox="0 0 20 20">
+            <circle cx="8.5" cy="8.5" r="5.5" />
+            <line x1="13" y1="13" x2="18" y2="18" />
+          </svg>
+
+          <input id="search-input" class="search__input" type="search"
+            placeholder="🔍 Buscar situação de emergência..." />
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- ACESSO RÁPIDO -->
+      <aside class="acesso-rapido">
+        <h2 class="acesso-rapido__title">⚡ Acesso Rápido</h2>
+        <p class="acesso-rapido__sub">
+          Em caso de emergência grave, ligue imediatamente:
+        </p>
+
+        <ul class="acesso-rapido__numbers">
+          <li>
+            <a href="tel:192">🚑 <strong>SAMU: 192</strong></a>
+          </li>
+          <li>
+            <a href="tel:193">🚒 <strong>Bombeiros: 193</strong></a>
+          </li>
+          <li>
+            <a href="tel:190">👮 <strong>Polícia: 190</strong></a>
+          </li>
+        </ul>
+      </aside>
+
+      <section class="cards-section">
+        <div class="cards-grid cards-grid--3" id="cards-container">
+
+          <article class="card card--urgente" data-titulo="Parada cardiorrespiratória">
+            <a href="../pages/situacoes/PCR.html"><span class="card__icon">😵</span>
+              <span class="badge">🚨 URGENTE</span>
+              <h3 class="card__title">Parada cardiorrespiratória </h3>
+              <p class="card__desc">perda de consciência e ausência de pulso central</p>
+            </a>
+          </article>
+
+          <article class="card card--urgente" data-titulo="Obstrução de Vias Aéreas (Engasgo)">
+            <a href="../pages/situacoes/engasgo.html"> <span class="card__icon">😖</span>
+              <span class="badge">🚨 URGENTE</span>
+              <h3 class="card__title">Obstrução de Vias Aéreas (Engasgo)</h3>
+              <p class="card__desc">Bloqueio das vias respiratórias</p>
+            </a>
+          </article>
+
+          <article class="card card--urgente" data-titulo="Afogamento">
+            <a href="../pages/situacoes/afogamento.html"><span class="card__icon">🌊</span>
+              <span class="badge">🚨 URGENTE</span>
+              <h3 class="card__title">Afogamento</h3>
+              <p class="card__desc">Aspiração de água para os pulmões.</p>
+            </a>
+          </article>
+
+        </div>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+
+        <div class="cards-grid cards-grid--4" id="cards-container">
+
+          <article class="card card--urgente" data-titulo="Sangramento">
+            <a href="../pages/situacoes/sangramento.html"><span class="card__icon">🩸</span>
+              <span class="badge">🚨 URGENTE</span>
+              <h3 class="card__title">Sangramento</h3>
+              <p class="card__desc">Cortes, ferimentos profundos ou extensos.</p>
+            </a>
+          </article>
+
+          <article class="card card--moderado" data-titulo="Queimaduras">
+            <a href="../pages/situacoes/queimaduras.html"><span class="card__icon">🔥</span>
+              <span class="badge">⚠️ MODERADO</span>
+              <h3 class="card__title">Queimaduras</h3>
+              <p class="card__desc">Danos na pele por calor, produtos químicos ou eletricidade.</p>
+            </a>
+          </article>
+
+          <article class="card card--moderado" data-titulo="Convulsões/Crise Epiléptica">
+            <a href="../pages/situacoes/convulsoes.html"> <span class="card__icon">😫</span>
+              <span class="badge">⚠️ MODERADO</span>
+              <h3 class="card__title">Convulsões/Crise Epiléptica</h3>
+              <p class="card__desc">Movimentos involuntários e perda de consciência.</p>
+            </a>
+          </article>
+
+        </div>
+
+        &nbsp;
+        &nbsp;
+        &nbsp;
+
+        <div class="cards-grid cards-grid--5" id="cards-container">
+
+          <article class="card card--moderado" data-titulo="Acidentes com Animais Peçonhentos">
+            <a href="../pages/situacoes/animaispec.html"> <span class="card__icon">🐍</span>
+              <span class="badge">⚠️ MODERADO</span>
+              <h3 class="card__title">Acidentes com Animais Peçonhentos</h3>
+              <p class="card__desc">Picadas de cobras, aranhas, escorpiões.</p>
+            </a>
+          </article>
+
+          <article class="card card--baixo" data-titulo="Desmaios/Síncope">
+            <a href="../pages/situacoes/desmaios.html"> <span class="card__icon">😞</span>
+              <span class="badge">✅ BAIXO</span>
+              <h3 class="card__title">Desmaios/Síncope</h3>
+              <p class="card__desc">Perda temporária de consciência.</p>
+            </a>
+          </article>
+
+          <article class="card card--baixo" data-titulo="Fraturas e Entorses">
+            <a href="../pages/situacoes/fratura.html"> <span class="card__icon">🦴</span>
+              <span class="badge">✅ BAIXO</span>
+              <h3 class="card__title">Fraturas e Entorses</h3>
+              <p class="card__desc">Ossos quebrados ou lesões nas articulações (entorses).</p>
+            </a>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <section class="lembrete">
+    <span class="lembrete__emoji">💡</span>
+
+    <h3 class="lembrete__title">Lembre-se!</h3>
+
+    <p class="lembrete__text">
+      Estes guias são para primeiros socorros básicos. Em situações graves, sempre procure ajuda médica profissional!
+    </p>
+  </section>
+
+  <!-- JS CORRETO -->
+  <script src="../js/primeiros-socorros.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Socorro Teen – Parada cardiorrespiratória</title>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/css situacoes/situacoes.css"/>
+</head>
+<body>
+
+     <!-- NAVBAR -->
+<div id="navbar-container"></div>
+<script type="module" src="../../js/loadNavbar.js"></script>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- Top actions -->
+  <div class="top-actions">
+    <a href="javascript:void(0)" class="btn-back" onclick="goBack()">← Voltar</a>
+    <button class="btn-audio" type="button" onclick="toggleAudio()">🔊 Ouvir guia</button>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero-card reveal">
+    <span class="hero-emoji">😵</span>
+    <h1 class="hero-title">Parada cardiorrespiratória</h1>
+    <p class="hero-sub">perda de consciência e ausência de pulso central</p>
+  </div>
+
+  <div class="steps">
+
+    <div class="step-card reveal">
+      <div class="step-header">
+        <span class="step-num">1</span>
+        <span class="step-title">Verifique a segurança e a resposta</span>
+      </div>
+      <p class="step-desc">Certifique-se de que o local é seguro. Toque nos ombros da vítima e chame em voz alta. Se ela não responder e não respirar (ou apenas bocejar), inicie o socorro.</p>
+      <div class="alert-box">
+        <span class="pill-icon">⚠️</span>
+        Não perca tempo tentando sentir o pulso se você não for profissional; a ausência de movimentos e respiração já indica a parada.
+      </div>
+    </div>
+
+    <div class="step-card reveal">
+      <div class="step-header">
+        <span class="step-num">2</span>
+        <span class="step-title">Chame ajuda imediatamente</span>
+      </div>
+      <p class="step-desc">Ligue para o SAMU (192) ou Bombeiros (193). Se houver alguém por perto, peça que tragam um DEA (Desfibrilador Externo Automático) urgente.</p>
+      <div class="tip-box">
+        <span class="pill-icon">✅</span>
+        Coloque o celular no viva-voz ao lado da vítima para receber orientações do atendente enquanto você inicia as manobras.
+      </div>
+    </div>
+
+    <div class="step-card reveal">
+      <div class="step-header">
+        <span class="step-num">3</span>
+        <span class="step-title">Posicione a vítima e as mãos</span>
+      </div>
+      <p class="step-desc">Deite a pessoa de costas em uma superfície rígida. Coloque a base de uma mão no centro do peito e a outra por cima, entrelaçando os dedos.</p>
+      <div class="alert-box">
+        <span class="pill-icon">⚠️</span>
+        Mantenha seus braços esticados e use o peso do seu corpo para aplicar a pressão, posicionando seus ombros diretamente sobre o peito da vítima.
+      </div>
+    </div>
+
+    <div class="step-card reveal">
+      <div class="step-header">
+        <span class="step-num">4</span>
+        <span class="step-title">Inicie as compressões</span>
+      </div>
+      <p class="step-desc">Comprima o peito com força e rapidez (profundidade de 5 a 6 cm) em um ritmo de 100 a 120 compressões por minuto. Deixe o tórax retornar totalmente após cada pressão.</p>
+      <div class="tip-box">
+        <span class="pill-icon">✅</span>
+        Um bom ritmo de referência é seguir a batida da música "Stayin' Alive". Não interrompa as compressões até o socorro chegar.
+      </div>
+    </div>
+
+    <div class="step-card reveal">
+      <div class="step-header">
+        <span class="step-num">5</span>
+        <span class="step-title">Use o DEA assim que disponível</span>
+      </div>
+      <p class="step-desc">Ligue o aparelho e siga rigorosamente as instruções de voz. Ele dirá se é necessário aplicar um choque ou continuar as compressões.</p>
+      <div class="alert-box">
+        <span class="pill-icon">⚠️</span>
+        Ninguém deve tocar na vítima no momento em que o DEA estiver analisando o ritmo cardíaco ou disparando o choque.
+      </div>
+    </div>
+
+  </div><div class="info-card reveal">
+    <p>💡 <strong>Dica importante:</strong> Se você não tiver treinamento em ventilação (boca a boca), faça apenas as compressões contínuas. O oxigênio residual no sangue ainda é vital nos primeiros minutos.</p>
+  </div>
+
+ 
+
+  <!-- Emergency contacts -->
+  <div class="emergency-section reveal">
+    <div class="emergency-title">
+      📞 Contatos de Emergência
+    </div>
+    <div class="emergency-grid">
+      <div class="emergency-card">
+        <span class="em-icon">🚑</span>
+        <div class="em-name">SAMU</div>
+        <div class="em-num">192</div>
+      </div>
+      <div class="emergency-card">
+        <span class="em-icon">🚒</span>
+        <div class="em-name">Bombeiros</div>
+        <div class="em-num">193</div>
+      </div>
+      <div class="emergency-card">
+        <span class="em-icon">👮</span>
+        <div class="em-name">Polícia</div>
+        <div class="em-num">190</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script src="../../js/situacoes.js"></script>
+</body>
+</html>
